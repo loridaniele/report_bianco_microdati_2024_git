@@ -1,0 +1,39 @@
+note sul lavoro di report bianco microdati O15 
+anni 2013-2023 - 1° parte
+#-------------------------------------------------------------
+
+- i grafici svg
+il alvoro di stesura ha portato alla costruzione dei grafici usando jupyter
+con pandas, matplotlib e un poco di seaborn (anche solo x esercizio ). 
+Tutti i grafici sono stati inseriti nel report nel formato svg.
+Alcuni leggendo file.svg esterni altri inserendo proprio in codice SVG nel
+body.
+Attenzione !! alcuni di questi SVG sono stati modificati in FIGMA, con 
+l'aggiunta di altri elementi nella figura, salvati e modificati con l'aggiunta
+di id e classi per permettere la loro manipolazione con css e javascript.
+es: 
+negli avviamenti x anno x CpI (domicilio lavoratore) due linee tratteggiate
+appaiono e scompaiono quando il grafico entra nella window di visibilità. 
+Le due linee tratteggiate sono state aggiunte in FIGMA e poi taggate con una class
+specifica. All'apertura della pagina un @keyframes in css le rende invisibili 
+(opacity: 0) e poi, a tempo, le rende visibili (opacity:1).
+
+Questo apre un problema su come salvare e archiviare i file VSG. 
+Vediamo:    1:archivio i file INIZIALI di matplotlib  ---------> .svg
+            2:archivio i file modificati FIGMA-----------------> _FIGMA.svg
+            3:salvo e archivio in nuovi file i codici SVG 
+            <svg>..</svg> modificati nel report html-----------> _FIGMA_In_report.svg
+
+
+
+files report
+------------------------------------------------------------- 
+esistono: il file di lavoro html, due file javascript  (data e funzioni), e un file CSS.
+-report_bianco_microdati_OS15.html
+-styles_report_bianco.css
+-data_microdati_report_bianco.js 
+-myscripts_report_bianco.js 
+
+esiste un file finale-unico, che comprende i vari file di lavoratore
+che viene rilasciato:
+-report_bianco_microdati_OS15_merge_version.html
